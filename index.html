@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mostra STEAM - Sound Pads</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="estrelas"></div>
+
+    <header>
+        <p class="mostra">MOSTRA STEAM</p>
+
+        <h1>Sound Pads</h1>
+
+        <p class="subtitulo">
+            Experiência sonora interativa
+        </p>
+    </header>
+
+
+    <main class="pads">
+
+        <!-- PAD 1 -->
+        <section class="pad">
+
+            <div class="numero">1</div>
+
+            <h2>EXPLOSÃO</h2>
+
+            <p class="nome-arquivo">
+                som de explosão
+            </p>
+
+            <button onclick="tocarSom(1)">
+                ▶ Tocar
+            </button>
+
+            <button onclick="pausarSom(1)">
+                ⏸ Pausar
+            </button>
+
+            <label>
+                Volume
+            </label>
+
+            <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+                oninput="mudarVolume(1, this.value)"
+            >
+
+            <label>
+                Tempo
+            </label>
+
+            <input
+                type="range"
+                id="tempo1"
+                min="0"
+                max="100"
+                value="0"
+                step="0.1"
+                oninput="mudarTempo(1)"
+            >
+
+            <p id="tempoTexto1" class="tempo">
+                00:00 / 00:00
+            </p>
+
+        </section>
+
+
+        <!-- PAD 2 -->
+        <section class="pad">
+
+            <div class="numero">02</div>
+
+            <h2>ALIEN</h2>
+
+            <p class="nome-arquivo">
+                som de porta com alien
+            </p>
+
+            <button onclick="tocarSom(2)">
+                ▶ Tocar
+            </button>
+
+            <button onclick="pausarSom(2)">
+                ⏸ Pausar
+            </button>
+
+            <label>
+                Volume
+            </label>
+
+            <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+                oninput="mudarVolume(2, this.value)"
+            >
+
+            <label>
+                Tempo
+            </label>
+
+            <input
+                type="range"
+                id="tempo2"
+                min="0"
+                max="100"
+                value="0"
+                step="0.1"
+                oninput="mudarTempo(2)"
+            >
+
+            <p id="tempoTexto2" class="tempo">
+                00:00 / 00:00
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
